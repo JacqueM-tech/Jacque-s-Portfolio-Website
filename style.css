@@ -68,7 +68,7 @@ section .title{
     padding-bottom: 20px;
     font-family: 'Ubuntu', sans-serif;
 }
-section .title::before{
+ /* section .title::before{  
     content: "";
     position: absolute;
     bottom: 0px;
@@ -77,10 +77,10 @@ section .title::before{
     height: 3px;
     background: #111;
     transform: translateX(-50%);
-}
+ }  */
 section .title::after{
     position: absolute;
-    bottom: -8px;
+    top: 45px;
     left: 50%;
     font-size: 20px;
     color: rgb(20, 180, 220);
@@ -221,115 +221,6 @@ section .title::after{
     background: none;
 }
 
-/* about section styling */
-.about .title::after{
-    content: "who i am";
-}
-.about .about-content .left{
-    width: 45%;
-}
-.about .about-content .left img{
-    height: 400px;
-    width: 400px;
-    object-fit: cover;
-    border-radius: 6px;
-}
-.about .about-content .right{
-    width: 55%;
-}
-.about .about-content .right .text{
-    font-size: 25px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.about .about-content .right .text span{
-    color: rgb(20, 180, 220);
-}
-.about .about-content .right p{
-    text-align: justify;
-}
-.about .about-content .right a{
-    display: inline-block;
-    background: rgb(20, 180, 220);
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 10px 30px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid rgb(20, 180, 220);
-    transition: all 0.3s ease;
-}
-.about .about-content .right a:hover{
-    color: rgb(20, 180, 220);
-    background: none;
-}
-
-/* skills section styling */
-
-.skills .title::after{
-    content: "what i know";
-}
-.skills .skills-content .column{
-    width: calc(50% - 30px);
-}
-.skills .skills-content .left .text{
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.skills .skills-content .left p{
-    text-align: justify;
-    max-width: 475px;
-    margin-bottom: 110px;
-}
-.skills .skills-content .left a:hover{
-    color: rgb(20, 180, 220);
-    background: none;
-}
-.skills .skills-content .right .bars{
-    margin-bottom: 15px;
-}
-.skills .skills-content .right .info{
-    display: flex;
-    margin-bottom: 5px;
-    align-items: center;
-    justify-content: space-between;
-}
-.skills .skills-content .right span{
-    font-weight: 500;
-    font-size: 18px;
-}
-.skills .skills-content .right .line{
-    height: 5px;
-    width: 100%;
-    background: lightgrey;
-    position: relative;
-}
-.skills .skills-content .right .line::before{
-    content: "";
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: rgb(20, 180, 220);
-}
-.skills-content .right .html::before{
-    width: 90%;
-}
-.skills-content .right .css::before{
-    width: 80%;
-}
-.skills-content .right .responsive::before{
-    width: 80%;
-}
-.skills-content .right .js::before{
-    width: 50%;
-}
-.skills-content .right .git::before{
-    width: 70%;
-}
-
 /* projects section styling */
 .projects .title::after{
     content: "review my work ";
@@ -393,26 +284,152 @@ section .title::after{
     background: rgb(20, 180, 220)!important;
 }
 
+/* skills section styling */
+
+.skills .title::after{
+    content: "what i know";
+}
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+}
+.skills .skills-content .left .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.skills .skills-content .left p{
+    text-align: justify;
+    max-width: 475px;
+    margin-bottom: 110px;
+}
+.skills .skills-content .left a:hover{
+    color: rgb(20, 180, 220);
+    background: none;
+}
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+.skills .skills-content .right .info{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 18px;
+}
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgb(20, 180, 220);
+}
+.skills-content .right .html::before{
+    width: 90%;
+}
+.skills-content .right .css::before{
+    width: 80%;
+}
+.skills-content .right .responsive::before{
+    width: 80%;
+}
+.skills-content .right .js::before{
+    width: 50%;
+}
+.skills-content .right .wordpress::before{
+    width: 50%;
+}
+.skills-content .right .git::before{
+    width: 80%;
+}
+
+/* about section styling */
+.about .title::after{
+    content: "who i am";
+}
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+    color: rgb(20, 180, 220);
+}
+.about .about-content .right p{
+    text-align: justify;
+}
+.about .about-content .right a{
+    display: inline-block;
+    background: rgb(20, 180, 220);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid rgb(20, 180, 220);
+    transition: all 0.3s ease;
+}
+.about .about-content .right a:hover{
+    color: rgb(20, 180, 220);
+    background: none;
+}
+
 /* contact section styling */
+
+.contact {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
 .contact .title::after{
     content: "get in touch";
     width: 120px;
 }
 .contact .icons {
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 100px;
+    flex-flow: column nowrap;
+    margin-top: 5rem;
+}
+
+.contact .row {
+    margin-bottom: 3rem;
 }
 .contact .row i{
     font-size: 25px;
     color: rgb(20, 180, 220);
 }
-.contact .head{
-    font-weight: 500;
-    color: #333;
+
+.location h3 iframe { 
+    display: flex;
+} 
+
+.location h3 {
+    justify-content: center;
+    align-items: center;
 }
-
-
 /* footer section styling */
 footer{
     background: #111;
@@ -442,15 +459,8 @@ footer span a:hover{
     .skills .skills-content .left .text{
         font-size: 19px;
     }
-    .contact .right form .fields{
-        flex-direction: column;
-    }
-    .contact .right form .name,
-    .contact .right form .email{
-        margin: 0;
-    }
     .scroll-up-btn{
-        right: 15px;
+        right: 45px;
         bottom: 15px;
         height: 38px;
         width: 35px;
@@ -462,6 +472,9 @@ footer span a:hover{
         width: 250px;
         object-fit: cover;
         border-radius: 50%;
+    }
+    .projects .carousel .card{
+        background: rgb(20, 180, 220);
     }
 }
 
@@ -478,7 +491,6 @@ footer span a:hover{
     .home .home-content a{
         font-size: 20px;
     }
-    
 }
 
 @media (max-width: 947px){
@@ -495,7 +507,7 @@ footer span a:hover{
         width: 100%;
         left: -100%;
         top: 0;
-        background: #111;
+        background: rgb(20, 180, 220);
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
@@ -553,6 +565,24 @@ footer span a:hover{
     .about .about-content .left img{
         height: 350px;
         width: 350px;
+    }
+    .contact .icons {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+    }
+
+    .location .head { 
+        margin-left: 2.5rem;
+
+    }
+
+    .location .map {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin-left: 2.5rem;
     }
 }
 

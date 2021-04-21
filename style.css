@@ -243,8 +243,8 @@ section .title::after{
     margin: 10px 0 7px 0;
 }
 .projects .carousel .card img{
-    height: 300px;
-    width: 300px;
+    height: 350px;
+    width: 365px;
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid rgb(20, 180, 220);
@@ -388,39 +388,40 @@ section .title::after{
 }
 
 /* contact section styling */
-
-.contact {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-}
 .contact .title::after{
     content: "get in touch";
     width: 120px;
 }
-.contact .icons {
+.contact {
     display: flex;
-    flex-flow: column nowrap;
-    margin-top: 5rem;
+    justify-content: center;
+    align-items: center;
 }
-
+.contact .location {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+} 
+.location .head {
+    margin-right: 45rem;
+}
+.map {
+    border: 3px rgb(20, 180, 220) solid;
+}
+.contact .icons { 
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
 .contact .row {
-    margin-bottom: 3rem;
+    margin: 1rem 6rem 2rem; 
 }
 .contact .row i{
     font-size: 25px;
     color: rgb(20, 180, 220);
 }
 
-.location h3 iframe { 
-    display: flex;
-} 
-
-.location h3 {
-    justify-content: center;
-    align-items: center;
-}
 /* footer section styling */
 footer{
     background: #111;
@@ -435,7 +436,6 @@ footer span a{
 footer span a:hover{
     text-decoration: underline;
 }
-
 
 /* responsive media query start */
 
@@ -459,8 +459,8 @@ footer span a:hover{
         line-height: 38px;
     }
     .projects .carousel .card img{
-        height: 250px;
-        width: 250px;
+        height: 275px;
+        width: 300px;
         object-fit: cover;
         border-radius: 50%;
     }
@@ -553,28 +553,19 @@ footer span a:hover{
 }
 
 @media (max-width: 1104px) {
+    .projects .carousel .card img{
+        height: 320px;
+        width: 310px;
+    }
     .about .about-content .left img{
         height: 350px;
         width: 350px;
     }
-    .contact .icons {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-evenly;
+    
+    .contact .row {
+        margin: 1rem-; 
     }
-
-    .location .head { 
-        margin-left: 2.5rem;
-
-    }
-
-    .location .map {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 80%;
-        margin-left: 2.5rem;
-    }
+    
 }
 
 @media (max-width: 1300px) {

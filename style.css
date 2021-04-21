@@ -394,6 +394,7 @@ section .title::after{
 }
 .contact {
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 }
@@ -467,6 +468,17 @@ footer span a:hover{
     .projects .carousel .card{
         background: rgb(20, 180, 220);
     }
+    .location .map iframe {
+        max-width: 300px;
+    }
+
+    .location .head {
+        margin-left: 12rem;
+    }
+    .contact .icons {
+        max-width: 300p;
+    }
+    
 }
 
 @media (max-width: 690px) {
@@ -561,10 +573,32 @@ footer span a:hover{
         height: 350px;
         width: 350px;
     }
-    
-    .contact .row {
-        margin: 1rem-; 
+    .contact {  
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+    .contact .location {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    } 
+    .contact .icons { 
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 3rem;
+    }
+    .contact .row {
+        margin: 1rem; 
+    }
+    .map {
+        display: flex;
+        max-width: 500px;
+    }
+    .location .head {
+        margin-right: 25rem;
+     }
     
 }
 

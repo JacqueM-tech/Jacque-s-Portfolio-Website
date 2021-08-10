@@ -284,7 +284,7 @@ section .title::after{
     width: calc(50% - 30px);
 }
 .skills .skills-content .left .text{
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 600;
     margin-bottom: 10px;
 }
@@ -292,6 +292,7 @@ section .title::after{
     text-align: justify;
     max-width: 475px;
     margin-bottom: 110px;
+    font-size: 20px;
 }
 .skills .skills-content .left a:hover{
     color: rgb(20, 180, 220);
@@ -328,18 +329,21 @@ section .title::after{
     width: 90%;
 }
 .skills-content .right .css::before{
+    width: 90%;
+}
+.skills-content .right .git::before{
     width: 80%;
 }
 .skills-content .right .responsive::before{
-    width: 80%;
+    width: 90%;
 }
 .skills-content .right .js::before{
-    width: 50%;
+    width: 60%;
 }
 .skills-content .right .wordpress::before{
-    width: 50%;
+    width: 80%;
 }
-.skills-content .right .git::before{
+.skills-content .right .shopify::before{
     width: 80%;
 }
 
@@ -397,6 +401,8 @@ section .title::after{
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    max-width: 90%;
+    margin-left: 5%;
 }
 .contact .location {
     display: flex;
@@ -412,12 +418,10 @@ section .title::after{
 }
 .contact .icons { 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-top: 4rem;
 }
-.contact .row {
-    margin: 1rem 6rem 2rem; 
-}
+
 .contact .row i{
     font-size: 25px;
     color: rgb(20, 180, 220);

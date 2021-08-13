@@ -286,6 +286,7 @@ section .title::after{
 .skills .skills-content .left .text{
     font-size: 25px;
     font-weight: 600;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 .skills .skills-content .left p{
@@ -404,27 +405,39 @@ section .title::after{
     max-width: 90%;
     margin-left: 5%;
 }
-.contact .location {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-} 
-.location .head {
-    margin-right: 45rem;
-}
-.map {
-    border: 3px rgb(20, 180, 220) solid;
-}
+.contact form {
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+ }
+ .contact input, #contact textarea {
+    width: 100%;
+    margin: 10px 0;
+    height: 40px;
+    border: 3px solid rgb(20, 180, 220); 
+    border-radius: 2%;
+ }
+ #contact textarea {
+     height: 200px;
+ }
+ .contact .button {
+    margin-top: 15px;
+    padding: 15px;
+    color: white;
+    border: 2px solid white; 
+    border-radius: 5%;
+    background-color: rgb(20, 180, 220);
+ }
 .contact .icons { 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 4rem;
 }
-
 .contact .row i{
     font-size: 25px;
     color: rgb(20, 180, 220);
+    /* margin-right: 15rem;  */
 }
 
 /* footer section styling */

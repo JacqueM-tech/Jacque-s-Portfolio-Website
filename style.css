@@ -282,70 +282,22 @@ section .title::after{
 }
 .skills .skills-content .column{
     width: calc(50% - 30px);
+    display: flex;
+    flex-flow: row wrap;
 }
 .skills .skills-content .left .text{
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 700;
     margin-top: 20px;
-    margin-bottom: 10px;
 }
-.skills .skills-content .left p{
-    text-align: justify;
-    max-width: 475px;
-    margin-bottom: 110px;
-    font-size: 20px;
-}
-.skills .skills-content .left a:hover{
+ .skills .skills-content .left p{
+    font-size: 1.25em;
+    line-height: 1.5em;
+} 
+.skills .skills-icon i {
+    font-size: 4em;
     color: rgb(20, 180, 220);
-    background: none;
-}
-.skills .skills-content .right .bars{
-    margin-bottom: 15px;
-}
-.skills .skills-content .right .info{
-    display: flex;
-    margin-bottom: 5px;
-    align-items: center;
-    justify-content: space-between;
-}
-.skills .skills-content .right span{
-    font-weight: 500;
-    font-size: 18px;
-}
-.skills .skills-content .right .line{
-    height: 5px;
-    width: 100%;
-    background: lightgrey;
-    position: relative;
-}
-.skills .skills-content .right .line::before{
-    content: "";
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: rgb(20, 180, 220);
-}
-.skills-content .right .html::before{
-    width: 90%;
-}
-.skills-content .right .css::before{
-    width: 90%;
-}
-.skills-content .right .git::before{
-    width: 80%;
-}
-.skills-content .right .responsive::before{
-    width: 90%;
-}
-.skills-content .right .js::before{
-    width: 60%;
-}
-.skills-content .right .wordpress::before{
-    width: 80%;
-}
-.skills-content .right .shopify::before{
-    width: 80%;
+    margin: .75em;
 }
 
 /* about section styling */
@@ -395,49 +347,24 @@ section .title::after{
 /* contact section styling */
 .contact .title::after{
     content: "get in touch";
-    width: 120px;
+    width: 130px;
 }
 .contact {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    max-width: 90%;
-    margin-left: 5%;
 }
-.contact form {
-    width: 90%;
-    max-width: 400px; 
-    margin: 20px auto;
-    text-align: center;
- }
- .contact input, #contact textarea {
-    width: 100%;
-    margin: 10px 0;
-    height: 40px;
-    border: 3px solid rgb(20, 180, 220); 
-    border-radius: 2%;
- }
- #contact textarea {
-     height: 200px;
- }
- .contact .button {
-    margin-top: 15px;
-    padding: 15px;
-    color: white;
-    border: 2px solid white; 
-    border-radius: 5%;
-    background-color: rgb(20, 180, 220);
- }
+
 .contact .icons { 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    margin-top: 3rem;
 }
 .contact .row i{
-    font-size: 25px;
+    font-size: 30px;
     color: rgb(20, 180, 220);
+    margin: 0 2em;
 }
 
 /* footer section styling */
@@ -609,6 +536,7 @@ footer{
     .location .head {
         margin-right: 25rem;
      }
+     
     
 }
 
@@ -616,4 +544,11 @@ footer{
     .home .max-width{
         margin-left: 0px;
     }
+    /* contact section */
+    .contact .row {
+        font-size: 30px;
+        margin-left: 30%;
+    }
+    
+    
 }

@@ -28,7 +28,7 @@ html{
 
 /* Base Styles */
 section{
-    padding: 100px 0;
+    padding: 50px 0;
 }
 .max-width{
     max-width: 1300px;
@@ -165,9 +165,8 @@ section .title::after{
 .home{
     display: flex;
     background: url("../images/hero.jpg") no-repeat center;
-    /* height: 95vh; */
     color: #fff;
-    height: 800px;
+    height: 775px;
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
@@ -209,6 +208,9 @@ section .title::after{
 }
 
 /* projects section styling */
+.projects h2 {
+    margin-top: 45px;
+}
 .projects .title::after{
     content: "review my work ";
 }
@@ -273,9 +275,6 @@ section .title::after{
 }
 
 /* skills section styling */
-.skills h2 {
-    margin-top: -5%;
-}
 .skills .title::after{
     content: "what i know";
 }
@@ -302,7 +301,7 @@ section .title::after{
 
 /* about section styling */
 .about h2 {
-    margin-top: -8%;
+    margin-top: -1%;
 }
 .about .title::after{
     content: "who i am";
@@ -422,6 +421,14 @@ footer{
 }
 
 @media (max-width: 768px) {
+    .home{
+        display: flex;
+        background: url("../images/hero.jpg") no-repeat center;
+        color: #fff;
+        height: 500px;
+        background-size: cover;
+        background-attachment: fixed;
+    }
     .max-width{
         padding: 0 23px;
     }
@@ -449,6 +456,10 @@ footer{
         justify-content: center;
         align-items: center;
     }
+    /* about section styling */
+    .about h2 {
+        margin-top: -10%;
+    }
     /* contact section styling */
     .contact .icons { 
         justify-content: center;
@@ -456,9 +467,9 @@ footer{
         margin-right: 20px;
     }
     .contact .row i{
-        font-size: 15px;
+        font-size: 25px;
         color: rgb(20, 180, 220);
-        margin: 0 .1em;
+        margin: 0 -12%;
     }
 }
 
@@ -578,6 +589,5 @@ footer{
         font-size: 30px;
         margin-left: 30%;
     }
-    
     
 }

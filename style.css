@@ -57,8 +57,6 @@ section{
     justify-content: space-evenly;
     align-items: center;
 }
-
-
 section .title{
     position: relative;
     text-align: center;
@@ -68,7 +66,6 @@ section .title{
     padding-bottom: 20px;
     font-family: 'Ubuntu', sans-serif;
 }
- 
 section .title::after{
     position: absolute;
     top: 45px;
@@ -164,14 +161,13 @@ section .title::after{
     filter: brightness(90%);
 }
 
-  
 /* home section styling */
 .home{
     display: flex;
     background: url("../images/hero.jpg") no-repeat center;
-    height: 95vh;
+    /* height: 95vh; */
     color: #fff;
-    min-height: 500px;
+    height: 800px;
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
@@ -217,7 +213,7 @@ section .title::after{
     content: "review my work ";
 }
 .projects .carousel .card{
-    background: #222;
+    background: rgb(243, 241, 241);
     border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
@@ -237,10 +233,11 @@ section .title::after{
 .projects .carousel .card:hover .box{
     transform: scale(1.05);
 }
-.projects .carousel .card .text{
+.projects .carousel .card .text a{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
+    color: black;
 }
 .projects .carousel .card img{
     height: 350px;
@@ -276,23 +273,26 @@ section .title::after{
 }
 
 /* skills section styling */
-
+.skills h2 {
+    margin-top: -5%;
+}
 .skills .title::after{
     content: "what i know";
 }
 .skills .skills-content .column{
-    width: calc(50% - 30px);
+    width: calc(49% - 30px);
     display: flex;
     flex-flow: row wrap;
+    margin-top: -2.5%;
 }
 .skills .skills-content .left .text{
-    font-size: 25px;
+    font-size: 1.5em;
     font-weight: 700;
-    margin-top: 20px;
+   margin-bottom: 20px; 
 }
  .skills .skills-content .left p{
-    font-size: 1.25em;
-    line-height: 1.5em;
+    font-size: 1.23em;
+    line-height: 1.65em;
 } 
 .skills .skills-icon i {
     font-size: 4em;
@@ -301,6 +301,9 @@ section .title::after{
 }
 
 /* about section styling */
+.about h2 {
+    margin-top: -8%;
+}
 .about .title::after{
     content: "who i am";
 }
@@ -418,7 +421,7 @@ footer{
     
 }
 
-@media (max-width: 690px) {
+@media (max-width: 768px) {
     .max-width{
         padding: 0 23px;
     }
@@ -430,6 +433,32 @@ footer{
     }
     .home .home-content a{
         font-size: 20px;
+    }
+    /* projects section styling */
+    .projects .carousel .card img{
+        height: 250px;
+        width: 250px;
+    }
+
+    /* skills section styling */
+    .skills .text {
+        text-align: center;
+        margin-bottom: 1em;
+    }
+    .skills p {
+        justify-content: center;
+        align-items: center;
+    }
+    /* contact section styling */
+    .contact .icons { 
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+    }
+    .contact .row i{
+        font-size: 15px;
+        color: rgb(20, 180, 220);
+        margin: 0 .1em;
     }
 }
 

@@ -82,7 +82,7 @@ section .title::after{
     position: fixed;
     width: 100%;
     z-index: 999;
-    padding: 40px 0;
+    padding: 10px 0;
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
 }
@@ -163,12 +163,11 @@ section .title::after{
 
 /* Mobile styling */
 .home{
-    display: flex;
-    background: url("../images/hero.jpg") no-repeat center;
+    background: url("../images/hero.jpg") no-repeat;
     color: #fff;
-    height: 75vh;
+    width: 100%;
+    height: 100vh;
     background-size: cover;
-    background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
 }
 .home .max-width{
@@ -217,7 +216,7 @@ section .title::after{
 .projects .carousel .card{
     background: rgb(243, 241, 241);
     border-radius: 6px;
-    padding: 25px 35px;
+    padding: 20px 35px;
     text-align: center;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -236,14 +235,14 @@ section .title::after{
     transform: scale(1.05);
 }
 .projects .carousel .card .text a{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
     margin: 10px 0 7px 0;
     color: black;
 }
 .projects .carousel .card img{
-    height: 350px;
-    width: 365px;
+    height: 345px;
+    width: 345px;
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid rgb(20, 180, 220);
@@ -421,6 +420,9 @@ footer{
 }
 
 @media (max-width: 768px) {
+    .navbar{
+        padding: 30px 0;
+    }
     .home{
         display: flex;
         background: url("../images/hero.jpg") no-repeat center;
@@ -581,8 +583,8 @@ footer{
 }
 
 @media (max-width: 1300px) {
-    .home .max-width{
-        margin-left: 0px;
+    .navbar{
+        padding: 20px;
     }
 
     /* contact section */

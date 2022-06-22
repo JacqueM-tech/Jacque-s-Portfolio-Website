@@ -299,7 +299,7 @@ section .title::after{
 .skills .skills-icon i {
     font-size: 3.5em;
     color: rgb(20, 180, 220);
-    margin: .95em;
+    margin: .9em;
 }
 
 /* about section styling */

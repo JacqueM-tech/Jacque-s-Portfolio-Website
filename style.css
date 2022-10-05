@@ -104,7 +104,7 @@ section .title::after{
     justify-content: space-between;
 }
 .navbar .logo a{
-    color: #fff;
+    color: rgb(105, 104, 104);
     font-size: 35px;
     font-weight: 600;
 }
@@ -121,7 +121,7 @@ section .title::after{
 }
 .navbar .menu li a{
     display: block;
-    color: #fff;
+    color: rgb(80, 74, 74);
     font-size: 25px;
     font-weight: 500;
     margin-left: 40px;
@@ -167,15 +167,16 @@ section .title::after{
 }
 
 .home{
-    background: url("../images/hero.png") no-repeat;
-    color: #fff;
+    /* background: url("../images/hero.png") no-repeat; */
+    color: gray;
     width: 100%;
     height: 100vh;
     background-size: cover;
     font-family: 'Ubuntu', sans-serif;
 }
 .home .max-width{
-    margin: auto 0 auto 30px;
+    display: flex;
+    /* margin: auto 0 auto 30px; */
 }
 .home .home-content .text-1{
     font-size: 27px;
@@ -208,6 +209,9 @@ section .title::after{
 .home .home-content a:hover{
     color: rgb(20, 180, 220);
     background: none;
+}
+.max-width img {
+    margin: 20rem 20rem 0;
 }
 
 /* projects section styling */
@@ -309,19 +313,7 @@ section .title::after{
 .about .title::after{
     content: "who i am";
 }
-.about .about-content .left{
-    width: 45%;
-}
-.about .about-content .left img{
-    height: 400px;
-    width: 400px;
-    object-fit: cover;
-    border-radius: 6px;
-}
-.about .about-content .right{
-    width: 55%;
-}
-.about .about-content .right .text{
+.about .about-content .text{
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 10px;
@@ -413,7 +405,7 @@ footer{
         font-size: 20px;
     }
     .projects .carousel .card img{
-        height: 250px;
+        height: 50px;
         width: 250px;
     } 
     .skills .text {

@@ -165,15 +165,17 @@ section .title::after{
     opacity: 1;
     pointer-events: auto;
 }
-
+/* home section start */
 .home{
-    color: gray;
+    color: rgb(109, 108, 108);
+    background-color: rgb(235, 231, 231);
     width: 100%;
     height: 100vh;
     font-family: 'Ubuntu', sans-serif;
 }
 .home .max-width{
     display: flex;
+    margin-top: -100px;
 }
 .home .home-content .text-1{
     font-size: 27px;
@@ -211,6 +213,7 @@ section .title::after{
     margin: 20rem 20rem 0;
     border-radius: 50%;
 }
+/* home section ends */
 
 /* projects section styling */
 .projects h2 {
@@ -232,7 +235,7 @@ section .title::after{
 }
 .projects .carousel .card .box{
     display: flex;
-    height: 550px;
+    height: 525px;
     padding-bottom: 250px;
     flex-direction: column;
     align-items: center;

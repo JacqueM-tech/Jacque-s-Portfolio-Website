@@ -235,7 +235,7 @@ section .title::after{
 }
 .projects .carousel .card .box{
     display: flex;
-    height: 525px;
+    max-height: 550px;
     padding-bottom: 250px;
     flex-direction: column;
     align-items: center;
@@ -369,31 +369,52 @@ footer{
 /* responsive media query start */
 
 @media (max-width: 500px) {
-    .home .home-content .text-1{
-        margin-top: 9.5rem;
+    .navbar .logo a span {
     }
-    .home .home-content .text-2{
-        font-size: 50px;
+    .home .max-width {
+        display: flex;
+        flex-flow: column nowrap;
+        /* justify-content: center;
+        align-items: center; */
+
     }
-    .home .home-content .text-3{
-        font-size: 27px;
-    }
-    .about .about-content .right .text,
-    .skills .skills-content .left .text{
-        font-size: 19px;
-    }
+    /* .home .home-content {
+        margin-left: 60px;
+        text-align: center;
+    } */
     .scroll-up-btn{
-        right: 45px;
-        bottom: 15px;
-        height: 38px;
-        width: 35px;
-        font-size: 23px;
-        line-height: 38px;
+        display: none;
+        
     }
     .projects .carousel .card{
         background: rgb(20, 180, 220);
     }
-} 
+    .projects .carousel .card:hover{
+        display: none;
+
+    }
+    .projects .carousel {
+        display: none;
+    }
+    .projects .carousel .card .box{
+        display: flex;
+        max-height: 350px;
+        padding-bottom: 250px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    .owl-dots{
+       display: none;
+    }
+    .skills .skills-icon i {
+        font-size: 3.5em;
+        color: rgb(20, 180, 220);
+        margin: .8em;
+    }
+
+    }
 
 @media (max-width: 768px) {
     .navbar{

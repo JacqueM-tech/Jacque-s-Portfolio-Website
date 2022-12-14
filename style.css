@@ -29,6 +29,7 @@ html{
 /* Base Styles */
 body {
     font-size: 16px;
+    background-color: #fff;
     color: rgb(38, 49, 49);
     font-family: 'Poppins', sans-serif;
 }
@@ -54,17 +55,7 @@ section{
     align-items: center;
     justify-content: space-between;
 }
-.contact .contact-content {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
-}
-.contact .contact-content .icons {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
+
 section .title{
     position: relative;
     text-align: center;
@@ -112,12 +103,11 @@ section .title::after{
     color: rgb(20, 180, 220);
     transition: all 0.3s ease;
 }
-.navbar.sticky .logo a span{
-    color: #fff;
+.navbar .menu {
+    display: flex;
 }
 .navbar .menu li{
     list-style: none;
-    display: inline-block;
 }
 .navbar .menu li a{
     display: block;
@@ -132,8 +122,50 @@ section .title::after{
 }
 .navbar.sticky .menu li a:hover{
     color: #fff;
+    transform: scale(1.1);
+    transition: 0.3s;
 }
-
+.navbar ul li:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+nav #hamburger-icon {
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+}
+nav #hamburger-icon div {
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.open .bar1 { 
+    -webkit-transform: rotate(-45deg) translate(-6px 6px);
+    transform: rotate(-45deg) translate(-6px 6px);
+}
+.open .bar2 {
+    opacity: 0;
+}
+.open .bar3 { 
+    -webkit-transform: rotate(45deg) translate(-6px 6px);
+    transform: rotate(45deg) translate(-6px 6px);
+}
+.open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    height: calc(100vh - 50px);
+    width: 100%;
+}
 /* menu btn styling */
 .menu-btn{
     color: #fff;
@@ -286,6 +318,7 @@ section .title::after{
 }
 
 /* skills section styling */
+
 .skills .title::after{
     content: "what i know";
 }
@@ -313,6 +346,9 @@ section .title::after{
 }
 
 /* about section styling */
+.about {
+    max-width: 100%;
+}
 .about h2 {
     margin-top: 100px;
 }
@@ -336,14 +372,6 @@ section .title::after{
     content: "get in touch";
     width: 130px;
 }
-.contact {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
 .contact .icons { 
     display: flex;
     justify-content: space-evenly;
@@ -351,8 +379,6 @@ section .title::after{
     margin-top: 50px;
 }
 .contact .row i{
-    display: flex;
-    justify-content: space-evenly;
     font-size: 30px;
     color: rgb(20, 180, 220);
     margin: 0 2em;
@@ -369,55 +395,80 @@ footer{
 /* responsive media query start */
 
 @media (max-width: 500px) {
-    .navbar .logo a span {
-    }
-    .home .max-width {
-        display: flex;
-        flex-flow: column nowrap;
-        /* justify-content: center;
+    .max-width{
+        max-width: 100%;
+        margin: auto;
+        /* display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
         align-items: center; */
+    }
+    .logo a {
+        margin: auto;
 
     }
-    /* .home .home-content {
-        margin-left: 60px;
-        text-align: center;
-    } */
-    .scroll-up-btn{
+    .navbar .max-width .menu {
         display: none;
-        
     }
-    .projects .carousel .card{
+    .home-content {
+        margin-top: 12rem;
+    }
+    .home-content .text-1 {
+        margin: 0;
+    }  
+    .home-content .text-2 {
+    }  
+    /* .max-width img {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        width: 50px;
+        height: 50px;
+    }  */
+    
+    nav #hamburger-icon {
+        display: block;
+    }
+    .skills .skills-icon i {
+        font-size: 3rem;
+        /* margin: .8em; */
+    } 
+    .about .max-width{
+        max-width: 100%;
+    }
+    .about .column {
+        margin-top: -30px;
+    }
+    .contact .row i{
+        margin: 0 1em;
+    } 
+   .scroll-up-btn{
+        display: none;
+    }
+    .projects .max-width {
+        max-width: 100%;
+    }
+    /* .projects .card{
+        width: 200px;
+        height: 400px;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
         background: rgb(20, 180, 220);
-    }
-    .projects .carousel .card:hover{
-        display: none;
-
-    }
+    }  */
     .projects .carousel {
         display: none;
     }
-    .projects .carousel .card .box{
-        display: flex;
-        max-height: 350px;
-        padding-bottom: 250px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease;
-    }
+    
     .owl-dots{
        display: none;
     }
-    .skills .skills-icon i {
-        font-size: 3.5em;
-        color: rgb(20, 180, 220);
-        margin: .8em;
-    }
-
+    
     }
 
 @media (max-width: 768px) {
-    .navbar{
+    /* .navbar{
         padding: 30px 0;
     }
     .max-width{
@@ -457,11 +508,11 @@ footer{
         font-size: 25px;
         color: rgb(20, 180, 220);
         margin: 0 1.75em;
-    }
+    } */
 }
  
 @media (max-width: 947px){
-    .menu-btn{
+    /* .menu-btn{
         display: block;
         z-index: 999;
     }
@@ -521,7 +572,7 @@ footer{
     }
     .skills .skills-icon {
         font-size: .75em;
-    }
+    } */
     
 }
 
